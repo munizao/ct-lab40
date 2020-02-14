@@ -1,14 +1,15 @@
 import { 
   FETCH_USER,
   FETCH_REPOS,
-} from '../constants/action-types';
+} from '../action-types';
+import { getUser, getRepos } from '../../services/github-api';
 
-export const fetchUser = (user) => ({
+export const fetchUser = (userName) => ({
   type: FETCH_USER,
-  payload: user
+  payload: getUser(userName)
 });
 
-export const fetchRepos = (user) => ({
+export const fetchRepos = (userName) => ({
   type: FETCH_REPOS,
-  payload: user
+  payload: getRepos(userName)
 });
