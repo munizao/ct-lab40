@@ -1,0 +1,4 @@
+export const FETCH_USER = 'FETCH_USER';
+export const FETCH_USER_LOADING = 'FETCH_USER_LOADING';
+export const FETCH_REPOS = 'FETCH_REPOS';
+export const FETCH_REPOS_LOADING = 'FETCH_REPOS_LOADING';
