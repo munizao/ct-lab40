@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { fetchUser } from '../redux/actions/actions';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser, selectLoading } from '../redux/selectors/selector';
 
 const UserPage = () => {
   const [userName, setUserName] = useState('');
   const dispatch = useDispatch();
   const userInfo = useSelector(selectUser);
+  const loading = useSelector(selectLoading);
   return (
     <>
       <header>
@@ -16,7 +18,9 @@ const UserPage = () => {
           <input type="text" value={userName}  onChange={({ target }) => setUserName(target.value)} />
           <button onClick={() => dispatch(fetchUser(userName))}>Submit</button>
         </div>
-        {userInfo}
+        <div>
+          {loading ? 'Loading...' : JSON.stringify(userInfo)}
+        </div>
       </main>
     </>
   );
