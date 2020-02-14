@@ -5,8 +5,9 @@ import {
 } from '../action-types';
 
 const initialState = {
-  loading: true,
-  post: null
+  loading: false,
+  user: null,
+  error: null
 };
 
 export default function reducer(state = initialState, action) {
