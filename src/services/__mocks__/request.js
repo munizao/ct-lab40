@@ -1,1 +1,1 @@
-export default () => Promise.resolve(['user data']);
+export default (path) => Promise.resolve([`path: ${path}`]);
