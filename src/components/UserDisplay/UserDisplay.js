@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectUser, selectLoading } from '../redux/selectors/user-selector';
+import { selectUser, selectLoading } from '../../redux/selectors/user-selector';
 
 const UserDisplay = () => {
   const userInfo = useSelector(selectUser);

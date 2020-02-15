@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { selectRepos, selectLoading } from '../redux/selectors/repos-selector';
-import { selectUser } from '../redux/selectors/user-selector';
-import { fetchRepos } from '../redux/actions/actions';
+import { selectRepos, selectLoading } from '../../redux/selectors/repos-selector';
+import { selectUser } from '../../redux/selectors/user-selector';
+import { fetchRepos } from '../../redux/actions/actions';
 import Repo from './Repo';
 
 const ReposDisplay = () => {
