@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { fetchUser } from '../redux/actions/actions';
 import { useDispatch } from 'react-redux';
 import UserDisplay from './UserDisplay';
+import ReposDisplay from './ReposDisplay';
 
 const UserPage = () => {
   const [userName, setUserName] = useState('');
@@ -18,6 +19,7 @@ const UserPage = () => {
           <button onClick={() => dispatch(fetchUser(userName))}>Submit</button>
         </div>
         <UserDisplay />
+        <ReposDisplay />
       </main>
     </>
   );
