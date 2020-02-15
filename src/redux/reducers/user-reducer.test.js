@@ -5,7 +5,6 @@ jest.mock('../../services/request.js');
 
 describe('User reducer', () => {
   it('FETCH_USER doesn\'t do anything in the reducer', () => {
-    console.log(initialState, 'initialState');
     const newState = userReducer(initialState, fetchUser());
     expect(newState).toEqual(initialState);
   });
