@@ -2,11 +2,9 @@ import {
   FETCH_USER,
   FETCH_REPOS,
 } from '../action-types';
-
 import { fetchUser, fetchRepos } from './actions';
 
 jest.mock('../../services/request.js');
-
 
 describe('actions module', () => {
   it('fetchUser creates a FETCH_USER action', () => {
