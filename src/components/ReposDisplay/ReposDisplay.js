@@ -5,6 +5,7 @@ import { selectRepos, selectLoading } from '../../redux/selectors/repos-selector
 import { selectUser } from '../../redux/selectors/user-selector';
 import { fetchRepos } from '../../redux/actions/actions';
 import Repo from './Repo';
+import styles from './ReposDisplay.css';
 
 const ReposDisplay = () => {
   const reposInfo = useSelector(selectRepos);
@@ -19,7 +20,7 @@ const ReposDisplay = () => {
   }, [user && user.login]);
 
   return (
-    <div>
+    <div className={styles.ReposDisplay}>
       {loading && 'Loading...'}
       {
         reposInfo &&
