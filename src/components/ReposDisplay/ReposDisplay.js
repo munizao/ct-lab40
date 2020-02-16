@@ -26,9 +26,9 @@ const ReposDisplay = () => {
       {reposError && <p>{reposError.message}</p>}
       {
         reposInfo &&
-          <div>
+          <ul>
             {reposInfo.map((repo) => <Repo key={repo.id} repo={repo} />)}
-          </div>
+          </ul>
       }
     </div>
   );
