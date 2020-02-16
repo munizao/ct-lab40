@@ -17,11 +17,11 @@ const UserDisplay = () => {
   </div>;
 
   return (
-    <>
+    <div className={styles.UserBar}>
       {error && <p>{error.message}</p>}
       {loading && <span>Loading...</span>}
       {userInfoDOM}
-    </>
+    </div>
   );
 };
 
