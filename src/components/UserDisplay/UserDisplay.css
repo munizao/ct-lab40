@@ -1,3 +1,6 @@
 .UserDisplay {
   width: 25vw;
+  img {
+    width: 5vw;
+  }
 }
