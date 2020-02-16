@@ -18,7 +18,7 @@ const UserDisplay = () => {
 
   return (
     <>
-      {error && <p>error.message</p>}
+      {error && <p>{error.message}</p>}
       {loading && <span>Loading...</span>}
       {userInfoDOM}
     </>
