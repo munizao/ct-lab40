@@ -1,13 +1,11 @@
 import React from 'react';
-
-
-[{"id":1296269,"node_id":"MDEwOlJlcG9zaXRvcnkxMjk2MjY5","name":"Hello-World","full_name":"octocat/Hello-World","private":false,"owner":{"login":"octocat","id":583231,"node_id":"MDQ6VXNlcjU4MzIzMQ==","avatar_url":"https://avatars3.githubusercontent.com/u/583231?v=4","gravatar_id":"","url":"https://api.github.com/users/octocat","html_url":"https://github.com/octocat","followers_url":"https://api.github.com/users/octocat/followers","following_url":"https://api.github.com/users/octocat/following{/other_user}","gists_url":"https://api.github.com/users/octocat/gists{/gist_id}","starred_url":"https://api.github.com/users/octocat/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/octocat/subscriptions","organizations_url":"https://api.github.com/users/octocat/orgs","repos_url":"https://api.github.com/users/octocat/repos","events_url":"https://api.github.com/users/octocat/events{/privacy}","received_events_url":"https://api.github.com/users/octocat/received_events","type":"User","site_admin":false},"html_url":"https://github.com/octocat/Hello-World","description":"My first repository on GitHub!","fork":false,"url":"https://api.github.com/repos/octocat/Hello-World","forks_url":"https://api.github.com/repos/octocat/Hello-World/forks","keys_url":"https://api.github.com/repos/octocat/Hello-World/keys{/key_id}","collaborators_url":"https://api.github.com/repos/octocat/Hello-World/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/octocat/Hello-World/teams","hooks_url":"https://api.github.com/repos/octocat/Hello-World/hooks","issue_events_url":"https://api.github.com/repos/octocat/Hello-World/issues/events{/number}","events_url":"https://api.github.com/repos/octocat/Hello-World/events","assignees_url":"https://api.github.com/repos/octocat/Hello-World/assignees{/user}","branches_url":"https://api.github.com/repos/octocat/Hello-World/branches{/branch}","tags_url":"https://api.github.com/repos/octocat/Hello-World/tags","blobs_url":"https://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/octocat/Hello-World/git/refs{/sha}","trees_url":"https://api.github.com/repos/octocat/Hello-World/git/trees{/sha}","statuses_url":"https://api.github.com/repos/octocat/Hello-World/statuses/{sha}","languages_url":"https://api.github.com/repos/octocat/Hello-World/languages","stargazers_url":"https://api.github.com/repos/octocat/Hello-World/stargazers","contributors_url":"https://api.github.com/repos/octocat/Hello-World/contributors","subscribers_url":"https://api.github.com/repos/octocat/Hello-World/subscribers","subscription_url":"https://api.github.com/repos/octocat/Hello-World/subscription","commits_url":"https://api.github.com/repos/octocat/Hello-World/commits{/sha}","git_commits_url":"https://api.github.com/repos/octocat/Hello-World/git/commits{/sha}","comments_url":"https://api.github.com/repos/octocat/Hello-World/comments{/number}","issue_comment_url":"https://api.github.com/repos/octocat/Hello-World/issues/comments{/number}","contents_url":"https://api.github.com/repos/octocat/Hello-World/contents/{+path}","compare_url":"https://api.github.com/repos/octocat/Hello-World/compare/{base}...{head}","merges_url":"https://api.github.com/repos/octocat/Hello-World/merges","archive_url":"https://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/octocat/Hello-World/downloads","issues_url":"https://api.github.com/repos/octocat/Hello-World/issues{/number}","pulls_url":"https://api.github.com/repos/octocat/Hello-World/pulls{/number}","milestones_url":"https://api.github.com/repos/octocat/Hello-World/milestones{/number}","notifications_url":"https://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/octocat/Hello-World/labels{/name}","releases_url":"https://api.github.com/repos/octocat/Hello-World/releases{/id}","deployments_url":"https://api.github.com/repos/octocat/Hello-World/deployments","created_at":"2011-01-26T19:01:12Z","updated_at":"2020-02-10T23:21:42Z","pushed_at":"2019-12-07T07:47:32Z","git_url":"git://github.com/octocat/Hello-World.git","ssh_url":"git@github.com:octocat/Hello-World.git","clone_url":"https://github.com/octocat/Hello-World.git","svn_url":"https://github.com/octocat/Hello-World","homepage":"","size":1,"stargazers_count":1531,"watchers_count":1531,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":1403,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":379,"license":null,"forks":1403,"open_issues":379,"watchers":1531,"default_branch":"master"},];
+import PropTypes from 'prop-types';
 
 const Repo = ({ repo }) => {
   return (
     <li>
       <p>{repo.name}</p>
-      <p>Open issues: {repo.open_issues}</p>
+      <p>Issues: {repo.open_issues}</p>
       <p>Forks: {repo.forks}</p>
       <p>Stars: {repo.stargazers_count}</p>
       <p>Created: {Date(repo.created_at)}</p>
@@ -15,6 +13,18 @@ const Repo = ({ repo }) => {
       <p>Description: {repo.description}</p>
     </li>
   );
+};
+
+Repo.propTypes = {
+  repo: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    open_issues: PropTypes.number.isRequired,
+    forks: PropTypes.number.isRequired,
+    stargazers_count: PropTypes.string.isRequired,
+    created_at: PropTypes.string.isRequired,
+    updated_at: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
+  })
 };
 
 export default Repo;
