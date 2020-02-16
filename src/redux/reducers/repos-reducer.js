@@ -1,7 +1,8 @@
 import { 
   FETCH_REPOS_PENDING,
   FETCH_REPOS_FULFILLED,
-  FETCH_REPOS_REJECTED
+  FETCH_REPOS_REJECTED,
+  FETCH_USER_REJECTED
 } from '../action-types';
 
 export const initialState = {
@@ -18,7 +19,9 @@ export const reposReducer = (state = initialState, action) => {
     case FETCH_REPOS_FULFILLED:
       return { ...state, loading: false, repos: action.payload, error: null };
     case FETCH_REPOS_REJECTED:
-      return { ...state, loading: false, repos: null, error: action.payload }; 
+      return { ...state, loading: false, repos: null, error: action.payload };
+    case FETCH_USER_REJECTED:
+      return { ...state, loading: false, repos: null, error: null }; 
     default:
       return state;
   }
