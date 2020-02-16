@@ -11,13 +11,13 @@ const UserPage = () => {
   const dispatch = useDispatch();
 
   return (
-    <>
+    <div className={styles.UserPage}>
       <header>
         <h1>GitHub User Search</h1>
       </header>
       <main className={styles.Main} >
         <section className={styles.Controls}>
-          <input type="text" value={userName}  onChange={({ target }) => setUserName(target.value)} />
+          <input type="text" placeholder="GitHub User" value={userName}  onChange={({ target }) => setUserName(target.value)} />
           <button onClick={() => dispatch(fetchUser(userName))}>Submit</button>
         </section>
         <section className={styles.Results}>
@@ -25,7 +25,7 @@ const UserPage = () => {
           <ReposDisplay />
         </section>
       </main>
-    </>
+    </div>
   );
 };
 
