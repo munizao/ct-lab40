@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserPage component renders UserPage 1`] = `
+<div
+  className="UserPage"
+>
+  <header>
+    <h1>
+      GitHub User Search
+    </h1>
+  </header>
+  <main
+    className="Main"
+  >
+    <section
+      className="Controls"
+    >
+      <input
+        onChange={[Function]}
+        placeholder="GitHub User"
+        type="text"
+        value=""
+      />
+      <button
+        onClick={[Function]}
+      >
+        Submit
+      </button>
+    </section>
+    <section
+      className="Results"
+    >
+      <UserDisplay />
+      <ReposDisplay />
+    </section>
+  </main>
+</div>
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Repo component renders Repo 1`] = `
+<li>
+  <p>
+    hello-world
+  </p>
+  <p>
+    Issues: 
+    5
+  </p>
+  <p>
+    Forks: 
+    3
+  </p>
+  <p>
+    Stars: 
+    7
+  </p>
+  <p>
+    Created: 
+    2/16/2020
+  </p>
+  <p>
+    Last Update: 
+    2/16/2020
+  </p>
+  <p>
+    Description: 
+    I just wanted to say hello to the world.
+  </p>
+</li>
+`;
