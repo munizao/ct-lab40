@@ -1,2 +1,5 @@
+before_install:
+- export TZ=America/Los_Angeles
+
 language: node_js
 node_js: node
