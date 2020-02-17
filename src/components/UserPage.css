@@ -1,0 +1,28 @@
+html, body {
+  height: 100vh;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #613d07;
+}
+
+.UserPage {
+  header {
+    padding: 1rem;
+    h1 {
+      margin: 0px;
+    }
+  }
+  main {
+    padding: 1rem;
+    .Controls {
+      input {
+        margin: 0px .7rem .7rem 0px;
+      }
+    }
+    .Results {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
